@@ -6,20 +6,24 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { DarkModeProvider } from './hooks/DarkModeContext';
+import { ThemeProvider } from '@mui/material';
+import theme from './materialUI/Theme';
 
 function App() {
 	return (
-		<DarkModeProvider>
-			<BrowserRouter>
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<Index />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
-		</DarkModeProvider>
+		<ThemeProvider theme={theme}>
+			<DarkModeProvider>
+				<BrowserRouter>
+					<Navbar />
+					<Routes>
+						<Route path="/" element={<Index />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/register" element={<Register />} />
+					</Routes>
+					<Footer />
+				</BrowserRouter>
+			</DarkModeProvider>
+		</ThemeProvider>
 	);
 }
 
