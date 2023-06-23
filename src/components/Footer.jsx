@@ -18,7 +18,7 @@ function Footer() {
 		>
 			<div className="flex justify-center items-center w-full h-full px-2">
 				<div className="flex">
-					<p className="uppercase tracking-widest py-3">
+					<p className="text-sm tracking-widest py-3">
 						Developed with{' '}
 						<a
 							className={

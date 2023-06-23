@@ -18,8 +18,13 @@ function Navbar({ isAuthenticated }) {
 			}
 		>
 			<div className="flex justify-between items-center w-full h-full px-2">
-				<Logo />
-
+				{/* <Logo /> */}
+				<div className="ml-10 py-3">
+					<p className="tracking-widest text-sm capitalize">
+						mode: {darkmode ? 'dark' : 'light'}
+					</p>
+					<LightSwitch />
+				</div>
 				<div>
 					{isAuthenticated ? (
 						<ul className="flex px-5">
@@ -35,9 +40,6 @@ function Navbar({ isAuthenticated }) {
 							{navBarArr.map((navitem, index) => {
 								return <NavbarItem key={index} navitem={navitem} />;
 							})}
-							<li className="ml-10 py-3">
-								<LightSwitch />
-							</li>
 						</ul>
 					)}
 				</div>
