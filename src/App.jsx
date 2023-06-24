@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { DarkModeProvider } from './hooks/DarkModeContext';
+import Resources from './pages/Resources';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/" element={<Index />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
+					<Route path="/resources" element={<Resources />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

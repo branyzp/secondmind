@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from '../hooks/DarkModeContext';
 import LightSwitch from './LightSwitch';
-import Logo from './Logo';
 import NavbarItem from './NavbarItem';
-const navBarArr = ['resources', 'register', 'login'];
+const navBarArr = ['register', 'login', 'resources'];
 const authenticatedNavBarArr = ['dashboard', 'expenses', 'user', 'logout'];
 
 function Navbar({ isAuthenticated }) {
